@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>俄罗斯方块</title>
+    <style type="text/css">
+        canvas{
+            border: 1px solid black;
+            display: block;
+            background: url(images/bg.png) repeat-x;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="360" height="480"></canvas>
+    <script type="text/javascript" src="js/simpleInheritance.js"></script>
+    <script type="text/javascript" src="js/Game.js"></script>
+    <script type="text/javascript" src="js/StaticResoucesUtil.js"></script>
+    <script type="text/javascript" src="js/FrameUtil.js"></script>
+    <script type="text/javascript" src="js/CellBlock.js"></script>
+    <script type="text/javascript" src="js/Map.js"></script>
+    <script type="text/javascript" src="js/ActiveBlock.js"></script>
+    <script type="text/javascript" src="js/underscore-min.js"></script>
+
+    <script type="text/javascript">
+        var game = new Game({
+            "canvasid" : "canvas",
+            "fps"   :   50
+        });
+    </script>
+</body>
+</html>
