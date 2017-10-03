@@ -156,9 +156,15 @@ document.addEventListener('touchstart', function(event){
 	strarX = event.touches[0].pageX;
 	strarY = event.touches[0].pageY;
 });
-document.addEventListener('touchmove', function(event){
-	event.preventDefault();
-});
+document.addEventListener('touchmove', function(event) {
+    // 判断默认行为是否可以被禁用
+    if (event.cancelable) {
+        // 判断默认行为是否已经被禁用
+        if (!event.defaultPrevented) {
+            event.preventDefault();
+        }
+    }
+}, false);
 document.addEventListener('touchend', function(event){
 	endX = event.changedTouches[0].pageX;
 	endY = event.changedTouches[0].pageY;
@@ -166,7 +172,7 @@ document.addEventListener('touchend', function(event){
 	var delatX = endX - strarX;
 	var delatY = endY - strarY;
 
-	if(Math.abs(delatX) < 0.3 * documentWidth && Math.abs(delatY) < 0.3 * documentWidth){
+	if(Math.abs(delatX) < 0.05 * documentWidth && Math.abs(delatY) < 0.05 * documentWidth){
 		return;
 	}
 
