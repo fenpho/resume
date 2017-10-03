@@ -11,7 +11,7 @@ h1{
 }
 header .newgamebutton{
 	display: block;
-	margin: 20px auto;
+	margin: 10px auto;
 	width: 100px;
 	padding: 10px;
 	background-color: #8f7a66;
@@ -26,14 +26,14 @@ header .newgamebutton:hover{
 header p{
 	font-family: Arial;
 	font-size: 25px;
-	margin: 20px auto;
+	margin: 10px auto;
 }
 
 .grid-container{
 	width: 460px;
 	height: 460px;
 	padding: 20px;
-	margin: 50px auto;
+	margin: 20px auto;
 	background-color: #bbada0;
 	border-radius: 10px;
 	position: relative;
