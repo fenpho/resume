@@ -557,9 +557,11 @@ nav .row:nth-child(4) ul li:nth-child(1)>div a::before{
 	box-sizing:content-box;
 }
 .huodong .bd ul li:nth-child(4){
+	float: right;
+	padding-bottom: 1px;
+}
+.huodong .bd ul li:nth-child(5){
 	border-left: none;
-	/*补足去掉边框后一像素的宽度*/
-	padding-left: 1px;
 }
 .huodong .bd ul li img{
 	width: 100%;
