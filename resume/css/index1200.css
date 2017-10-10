@@ -1,0 +1,458 @@
+body{
+	font: 14px Microsoft YaHei;
+    color: #666;
+}
+.center{
+	margin: 0 auto;
+	width: 1200px;
+}
+.cb{
+	clear: both;
+}
+.margin-right-none{
+	margin-right: 0px !important;
+}
+a{
+	text-decoration: none !important;
+}
+header{
+	position: fixed;
+	width: 100%;
+	height: 70px;
+	background-color: #fff;
+	border-bottom: 1px solid #44bdbf;
+	z-index: 9999;
+}
+.fixed{
+	height: 70px;
+	position: fixed;
+	left: 50%;
+	margin-left: -600px;
+	background-color: #fff;
+}
+header .logo{
+	float: left;
+	height: 70px;
+	width: 116px;
+	background: url(../images/fenpho.png);
+	text-indent: -999em;
+}
+header nav ul li{
+	float: right;
+	width: 100px;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+}
+header nav ul li a{
+	display: block;
+	width: 100px;
+	height: 65px;
+	line-height: 70px;
+	text-decoration: none;
+	color: #666;
+	position: relative;
+}
+header nav ul li a:hover{
+	color: #44bdbf;
+	background-color: #f8f9fb;
+}
+header nav ul li a:after{
+	content:"";
+	width: 0px;
+	height: 5px;
+	background-color: transparent;
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	transition: width 300ms cubic-bezier(0.175,0.885,0.32,1.275);
+}
+header nav ul li a:hover:after{
+	width: 100%;
+	background-color: #44bdbf;
+}
+.banner{
+	/*空出标准流的位置给导航条*/
+	padding-top: 71px;
+}
+.carousel{
+	height: 400px;
+	margin: 0 auto;
+	position: relative;
+}
+.carousel ul li{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.carousel ul li img{
+	width: 100%;
+	height: 100%;
+}
+.carousel ul li.first{
+	display: block;
+}
+.btns a{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 50%;
+	margin-top: -20px;
+	background: url(../images/sprite.png);
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 999;
+	transition:all 400ms ease 0s;
+}
+.btns a:hover{
+	box-shadow: 0px 0px 6px 5px #44bdbf;
+}
+.btns .leftBtn{
+	left: 20px;
+	background-position: -4px -4px;
+}
+.btns .leftBtn:hover{
+	background-position: -4px -89px;
+}
+.btns .rightBtn{
+	right: 20px;
+	background-position: -4px -46px;
+}
+.btns .rightBtn:hover{
+	background-position: -4px -133px
+}
+.circles{
+	position: absolute;
+	width: 110px;
+	height: 16px;
+	bottom: 10px;
+	right: 20px;
+}
+.circles ol li{
+	float: left;
+	width: 16px;
+	height: 16px;
+	background-color: #aaa;
+	margin-right: 6px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.circles ol li.cur{
+	background-color: #44bdbf;
+}
+.circles ol li:hover{
+	background-color: #44bdbf;
+	box-shadow: 0px 0px 2px 1px #44bdbf;
+}
+.boom div{
+	position: absolute;
+	transition:all 1s ease 0s;
+	transform:none;
+	z-index: 10000;
+}
+.carousel ul li.cur{
+	display: block;
+}
+.works ul li{
+	width: 25%;
+	height: 335px;
+	float: left;
+	padding-top: 35px;
+	perspective:600px;
+}
+.works ul li div.pic{
+	margin: 30px auto;
+	width: 80px;
+	height: 80px;
+	background: url(../images/works/works.png);
+	background-size: cover;
+	border-radius: 50%;
+	transition:all 700ms ease 0s;
+}
+.works ul li div.pic:hover{
+	transform:translate3d(0px,13px,100px);
+}
+.works ul li:nth-of-type(2) div.pic{
+	background-position: -102px 0px;
+}
+.works ul li:nth-of-type(3) div.pic{
+	background-position: -204px 0px;
+}
+.works ul li:nth-of-type(4) div.pic{
+	background-position: -306px 0px;
+}
+.works ul li div.text{
+	padding: 0px 27px;
+	line-height: 20px;
+	font-size: 12px;
+	text-align: center;
+}
+.works ul li div.text p{
+    height: 50px;
+    line-height: 25px;
+    text-indent: 2em;
+    font-size: 13px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.works ul li div.text h3 a{
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	color: #4f5160;
+	text-align: center;
+}
+.works ul li div.text span{
+	margin: 10px auto;
+	display: block;
+	height: 24px;
+	width: 80px;
+	text-align: center;
+	line-height: 23px;
+	font-size: 12px;
+	border-radius: 5px;
+	color: #44bdbf;
+	background-color: #fff;
+	border:1px solid #44bdbf;
+	transition:all 400ms ease 0s;
+}
+.works ul li div.text span:hover{
+	color: #fff;
+	background-color: #44bdbf;
+	border:1px solid #fff;
+}
+.games{
+	background-color: #f1f1f1;
+	padding-bottom: 75px;
+}
+.games h2{
+	height: 104px;
+	line-height: 104px;
+	text-align: center;
+	color: #4f5160;
+	font-size: 26px;
+}
+.games .gamesimg ul li{
+	float: left;
+	background-color: #444;
+	width: 383px;
+	height: 230px;
+	margin: 0px 25px 25px 0px;
+}
+.games .gamesimg ul li img{
+	width: 100%;
+	height: 100%;
+}
+.games span{
+	margin: 10px auto 0px auto;
+	display: block;
+	height: 32px;
+	width: 166px;
+	text-align: center;
+	line-height: 32px;
+	color: #44bdbf;
+	background-color: #fff;
+	border:1px solid #44bdbf;
+	transition:all 400ms ease 0s;
+	border-radius: 3px;
+	font-size: 12px;
+}
+.games span:hover{
+	color: #fff;
+	background-color: #44bdbf;
+	border:1px solid #fff;
+}
+.more h2{
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+	color: #4f5160;
+	font-size: 26px;
+}
+.more ul li{
+	width: 25%;
+	height: 400px;
+	float: left;
+	perspective:600px;
+}
+.more ul li div.pic{
+	margin: 0px auto 40px auto;
+	width: 145px;
+	height: 145px;
+	background: url(../images/works/more.png);
+	background-size: cover;
+	transition:all 1s ease 0s;
+}
+.more ul li div.pic:hover{
+	transform-origin:10% 0px;
+	transform:rotateY(360deg);
+}
+.more ul li:nth-of-type(2) div.pic{
+	background-position: -178px 0px;
+}
+.more ul li:nth-of-type(3) div.pic{
+	background-position: -356px 0px;
+}
+.more ul li:nth-of-type(4) div.pic{
+	background-position: -534px 0px;
+}
+.more ul li div.text{
+	text-align: center;
+	line-height: 20px;
+	padding: 0px 27px;
+	font-size: 12px;
+}
+.more ul li div.text p{
+ 	height: 75px;
+    line-height: 25px;
+    text-indent: 2em;
+    font-size: 13px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+ }
+.more ul li div.text h3 a{
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	color: #4f5160;
+	text-align: center;
+	text-decoration: none;
+}
+.more ul li div.text span{
+	display: block;    
+	height: 25px;
+    line-height: 20px;
+	font-size: 12px;
+	color: #49cbcd;
+}
+.pro{
+	background-color: #f1f1f1;
+	overflow: hidden;
+}
+.pro .skills{
+	padding: 85px 0px;
+	overflow: hidden;
+	box-sizing:border-box;
+}
+.skills h3{
+	height: 64px;
+	line-height: 64px;
+	text-align: center;
+	background-color: #485460;
+	color: #fff;
+	font-size: 16px;
+}
+.skills .blue h3{
+	background-color: #49cbcd;
+}
+.skills>ul>li{
+	float: left;
+	width: 383px;
+	margin-right: 25px;
+	text-align: center;
+	background-color: #f8f9fb;
+}
+.skills>ul>li>a{
+	background-color: #fff;
+	width: 100%;
+	height: 74px;
+	display: block;
+	padding-top: 20px;
+	box-sizing:border-box;
+}
+.skills>ul>li ul li{
+	background-color: #fff;
+	height: 42px;
+	line-height: 42px;
+	border-bottom: 1px solid #f7f9f8;
+}
+.skills>ul>li ul li a{
+	color: #4f5160;
+}
+.skills>ul>li ul li.cur,.skills>ul>li ul li:hover{
+	background-color: #f8f9fb;
+	color: #000;
+}
+.skills span{
+	margin: 0px auto;
+	display: block;
+	height: 28px;
+	width: 122px;
+	text-align: center;
+	line-height: 28px;
+	color: #485460;
+	background-color: #fff;
+	border:1px solid #485460;
+	border-radius: 3px;
+	transition:all 400ms ease 0s;
+}
+.skills span:hover{
+	color: #fff;
+	background-color: #485460;
+	border:1px solid #485460;
+}
+.pro .blue span{
+	border-color: #49cbcd;
+}
+.pro .blue span:hover{
+	background-color: #49cbcd;
+}
+.saying{
+	padding: 50px 280px;
+	box-sizing:border-box;
+	text-align: center;
+}
+.says h2{
+	height: 110px;
+	line-height: 140px;
+	font-size: 26px;
+	color: #4f5160;
+}
+.says p{
+	line-height: 30px;
+	text-indent: 2em;
+	font-size: 22px;
+}
+.says span{
+	display: block;
+	width: 100px;
+	margin: 0 auto;
+	height: 70px;
+	line-height: 70px;
+	color: #bab6c4;
+}
+footer{
+	    background-color: #f1f1f1;
+}
+.contact{
+	overflow: hidden;
+	padding-bottom: 40px;
+	text-align: center;
+}
+.contact h2{
+	font-size: 26px;
+	height: 55px;
+    line-height: 80px;
+	text-align: center;
+	color: #4f5160;
+}
+.contact span{
+	height: 25px;
+    line-height: 53px;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+}
+

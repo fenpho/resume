@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		html,body{
+			height: 100%;
+		}
+		body{
+			perspective:800px;
+		}
+		.unit{
+			height: 100%;
+			margin: 50px;
+			position: relative;
+			transform-style:preserve-3d;
+		}
+		div.grid{
+			width: 25px;
+			height: 40px;
+			background: #0f0;
+			opacity: 0.5;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -15px;
+			margin-left: -10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="unit"></div>
+
+	<script type="text/javascript" src="../js/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript">
+		var $unit = $(".unit");
+		//每一层我需要的元素数量
+		var arr = [30, 25, 20, 15, 10, 5, 1];
+		for (var i = 0; i <= 7; i++) {
+			//设置上半球
+			set(i, arr[i]);
+			//上半球设置0了，下半球就不需要设置第0层了
+			if(i == 0) continue;
+			//设置下半球
+			set(-i, arr[i]);
+		}
+		//设置一层的函数，上半球一共5层，所以每层18度。
+		//floor就是层序号，amount就是这一层需要的图片个数。
+		function set(floor, amount){
+			for (var i = 0; i < amount; i++) {
+				//链式编程
+				$("<div class='grid'></div>").css({
+					"transform":"rotateY(" + 360 / amount * i + "deg) rotateX(" + floor * 15 + "deg) translateZ(300px)",
+					"background":"rgb(" + parseInt(Math.random() * 255) + "," + parseInt(Math.random() * 255) + "," + parseInt(Math.random() * 255) + ")"
+				}).appendTo($unit);
+			};
+		}
+		//鼠标
+		$(document).mousemove(function(event){
+			$unit.css("transform","rotateX(" + event.clientY / 5 + "deg) rotateY(" + event.clientX / 5 + "deg)");
+		});
+	</script>
+</body>
+</html>

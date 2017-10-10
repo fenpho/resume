@@ -1,0 +1,182 @@
+.center{
+	width: 992px;
+}
+header{
+	height: 70px;
+}
+.fixed{
+	height: 70px;
+	position: fixed;
+	left: 50%;
+	margin-left: -496px;
+	background-color: #fff;
+}
+header .logo{
+	height: 70px;
+	width: 116px;
+}
+header nav ul li{
+	width: 100px;
+	height: 70px;
+	line-height: 70px;
+}
+header nav ul li a{
+	width: 100px;
+	height: 65px;
+	line-height: 70px;
+}
+header nav ul li a:after{
+	width: 0px;
+	height: 5px;
+	bottom: -5px;
+}
+.banner{
+	/*空出标准流的位置给导航条*/
+	padding-top: 71px;
+}
+.btns a{
+	width: 40px;
+	height: 40px;
+	top: 50%;
+	margin-top: -20px;
+}
+.btns .leftBtn{
+	left: 20px;
+}
+.btns .rightBtn{
+	right: 20px;
+}
+.circles{
+	width: 110px;
+	height: 16px;
+	bottom: 10px;
+	right: 20px;
+}
+.circles ol li{
+	width: 16px;
+	height: 16px;
+	margin-right: 6px;
+}
+.works ul li{
+	width: 25%;
+	height: 335px;
+	padding-top: 35px;
+}
+.works ul li div.pic{
+	margin: 30px auto;
+	width: 80px;
+	height: 80px;
+}
+.works ul li div.pic:hover{
+	transform:translate3d(0px,13px,100px);
+}
+.works ul li div.text{
+	padding: 0px 27px;
+	line-height: 20px;
+}
+.works ul li div.text p{
+    height: 50px;
+    line-height: 25px;
+}
+.works ul li div.text h3 a{
+	height: 30px;
+	line-height: 30px;
+}
+.works ul li div.text span{
+	margin: 10px auto;
+	height: 24px;
+	width: 80px;
+	line-height: 23px;
+}
+.games{
+	padding-bottom: 75px;
+}
+.games h2{
+	height: 104px;
+	line-height: 104px;
+}
+.games .gamesimg ul li{
+	width: 320px;
+	height: 192px;
+	margin: 0px 16px 16px 0px;
+}
+.games span{
+	margin: 10px auto 0px auto;
+	height: 32px;
+	width: 166px;
+	line-height: 32px;
+}
+.more h2{
+	height: 150px;
+	line-height: 150px;
+}
+.more ul li{
+	width: 25%;
+	height: 400px;
+}
+.more ul li div.pic{
+	margin: 0px auto 40px auto;
+	width: 145px;
+	height: 145px;
+}
+.more ul li div.text{
+	line-height: 20px;
+	padding: 0px 27px;
+}
+.more ul li div.text p{
+ 	height: 75px;
+    line-height: 25px;
+ }
+.more ul li div.text h3 a{
+	height: 30px;
+	line-height: 30px;
+}
+.more ul li div.text span{
+	height: 25px;
+    line-height: 20px;
+}
+.skills h3{
+	height: 64px;
+	line-height: 64px;
+}
+.skills>ul>li{
+	width: 314px;
+	margin-right: 25px;
+}
+.skills>ul>li ul li{
+	height: 42px;
+	line-height: 42px;
+}
+.skills span{
+	height: 28px;
+	width: 122px;
+	line-height: 28px;
+}
+.saying{
+	padding: 50px 280px;
+}
+.says h2{
+	height: 110px;
+	line-height: 140px;
+}
+.says p{
+	line-height: 30px;
+}
+.says span{
+	width: 100px;
+	height: 70px;
+	line-height: 70px;
+}
+.contact{
+	padding-bottom: 40px;
+}
+.contact h2{
+	height: 55px;
+    line-height: 80px;
+}
+.contact span{
+	height: 25px;
+    line-height: 53px;
+    width: 200px;
+}
+

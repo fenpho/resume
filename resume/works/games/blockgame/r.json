@@ -1,0 +1,7 @@
+{
+	"images" : [
+        {"name" : "ball" , "src" : "images/ball.png"},
+        {"name" : "racket" , "src" : "images/racket.png"},
+        {"name" : "block" , "src" : "images/block.png"}
+    ]
+}

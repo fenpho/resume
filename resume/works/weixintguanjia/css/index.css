@@ -1,0 +1,247 @@
+html,body{
+	height: 100%;
+	overflow: hidden;
+}
+
+
+.header{
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: white;
+	z-index: 999;
+}
+.header h1{
+	float: left;
+	width: 155px;
+	height: 60px;
+	background: url(../images/logo.jpg) no-repeat;
+	text-indent: -999em;
+}
+.header h1 a{
+	display: block;
+	width: 155px;
+	height: 60px;
+}
+.header .nav{
+	float: left;
+	width: 800px;
+	margin-left: 20px;
+}
+.header .nav li{
+	float: left;
+	width: 80px;
+	height: 60px;
+	border-right: 1px solid #ccc;
+	text-align: center;
+	line-height: 60px;
+	font-size: 12px;
+	font-weight: bold;
+}
+.header .nav li a{
+	display: block;
+	width: 80px;
+	height: 60px;
+	text-decoration: none;
+	color:#333;
+}
+.header .nav li.cur a{
+	background-color: orange;
+	color:white;
+}
+
+
+.container{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+}
+.page{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.no1{
+	background-color: pink;
+}
+.no2{
+	background-color: blue;
+}
+.no3{
+	background-color: orange;
+}
+.no4{
+	background-color: green;
+}
+.no5{
+	background-color: #ccc;
+}
+
+
+.inner_c{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+/*第1屏幕*/
+.no1{
+	background: url(../images/b1_bg.jpg) no-repeat center top;
+	background-size: cover;
+}
+.no1 .b1_01{
+	position: absolute;
+	bottom:-100px;
+	left: 50%;
+	margin-left: -720px;
+	 
+}
+.no1 .b1_02{
+	position: absolute;
+	top: 80px;
+	left:-100px;
+}
+.no1 .b1_03{
+	position: absolute;
+	top: 200px;
+	right:70px;
+	 
+}
+.no1 .b1_03_btn{
+	position: absolute;
+	top: 400px;
+	right:170px;
+	 
+}
+.no1 .b1_04{
+	position: absolute;
+	top: 300px;
+	right:-110px;
+	animation:huangyou 1s ease 0s infinite alternate;
+}
+
+@-webkit-keyframes huangyou{
+	from{
+		margin-top: -30px;
+	}
+	to{
+		margin-top: 0;
+	}
+}
+
+
+/*第2页面*/
+.no2{
+	background: url(../images/b2_bg.jpg) no-repeat center top;
+	background-size: cover;
+}
+
+.no2 .b2_01{
+	position: absolute;
+	left: -300px;
+	top:50%;
+	margin-top: -200px;
+}
+.no2 .b2_03{
+	position: absolute;
+	top: 100px;
+	left: 200px;
+
+}
+.no2 .b2_04{
+	position: absolute;
+	top: 100px;
+	left: 200px;
+}
+.no2 .b2_05{
+	position: absolute;
+	top: 100px;
+	right: 200px;
+}
+.no2 .b2_06{
+	position: absolute;
+	top: 300px;
+	right: 20px;
+	animation:huangyou 1s ease 0s infinite alternate;
+}
+
+/*第3页面*/
+.no3{
+	background: url(../images/b3_bg.jpg) no-repeat center top;
+	background-size: cover;
+}
+.no3 .box{
+	width: 100%;
+	height: 550px;
+	position: relative;
+	top: 50%;
+	left: 0;
+	margin-top: -225px;
+}
+.no3 .box .b3_01{
+	position: absolute;
+	top: 50%;
+	left:50%;
+	margin-left: -190px;
+	margin-top: -170px;
+}
+.no3 .box .info li{
+	position: absolute;
+	width: 180px;
+	height: 60px;
+	top: 100px;
+	left: 100px;
+	background-color: orange;
+}
+.no3 .box .info li.info_no1{
+	top: 100px;
+	left: 100px;
+}
+.no3 .box .info li.info_no2{
+    top: 250px;
+    left: 20px;
+}
+.no3 .box .info li.info_no3{
+	top: 410px;
+    left: 100px;
+}
+.no3 .box .info li.info_no4{
+    top: 100px;
+    left: 700px;
+}
+.no3 .box .info li.info_no5{
+    top: 250px;
+    left: 790px;
+}
+.no3 .box .info li.info_no6{
+	top: 410px;
+    left: 670px;
+}
+
+
+
+.no4{
+	background: url(../images/b4_bg.jpg) no-repeat center top;
+	background-size: cover;
+}
+
+
+.no5{
+	background: url(../images/b5_bg.jpg) no-repeat center top;
+	background-size: cover;
+}
+
+.no6{
+	background: url(../images/b6_bg.jpg) no-repeat center top;
+	background-size: cover;
+}
+
+.no7{
+	background: url(../images/b7_bg.jpg) no-repeat center top;
+	background-size: cover;
+}

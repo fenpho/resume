@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		table,tr,td{
+			border-collapse: collapse;
+			border: 1px solid #ccc;
+		}
+		td{
+			line-height: 25px;
+		}
+		tr{
+			height: 40px;
+		}
+		.kk{
+			width: 600px;
+		}
+	</style>
+</head>
+<body>
+	<h1>小小留言本</h1>
+	<a href="write.html">添加留言</a>
+	<table id="biaoge">
+		<tr>
+			<td>id</td>
+			<td>姓名</td>
+			<td>时间</td>
+			<td>qq号</td>
+			<td>内容</td>
+			<td></td>
+		</tr>
+	</table>
+
+	<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript">
+
+		$.get("control/read.php",{"paixu":1},function(data){
+			//返回的data是一个json，现在开始组建DOM
+			for(var i = 0 ; i < data.jieguo.length ; i++){
+				var o = eval("(" + data.jieguo[i] + ")");
+				$("#biaoge").append($(
+						"<tr num=" + o.id +">" +
+						"	<td>" + o.id + "</td>" +
+						"	<td>" + o.xingming + "</td>" +
+						"	<td>" + o.shijian + "</td>" +
+						"	<td>" + o.qqhao + "</td>" +
+						"	<td><div class='neirong'>" + o.neirong + "</div></td>" +
+						"	<td><a class='del' href='javascript:;'>删除</a></td>" + 
+						"</tr>"
+				));
+			}
+
+			//DOM组建完毕，就可以给所有的a标签添加事件监听
+			//事件绑定
+			$("a.del").click(function(){
+				var num = $(this).parents("tr").attr("num");
+
+				if(!confirm("你真的要删除id为" + num + "的条目么？")){
+					return;
+				}
+				//备份
+				var $this = $(this);
+				//单击事件
+				$.get("control/delete.php",{"id" : num} , function(data){
+					$this.parents("tr").fadeOut();
+				});
+			});
+
+
+			//事件绑定
+			$(".neirong").click(function(){
+				var num = $(this).parents("tr").attr("num");
+				//自己消失
+				$(this).hide();
+				//后面添加一个DOM输入框
+				$(this).after("<input type='text' class='kk' />");
+				//让自己的兄弟kk（就是上一条语句添加的那个kk，里面的内容变为自己的html）
+				$(this).siblings(".kk").val($(this).html());
+				//让光标在里面闪烁，focus是原生JS的方法，所以要加[0]
+				$(this).siblings(".kk")[0].focus();
+
+				//添加监听
+				$(this).siblings(".kk").keydown(function(event){
+					if(event.keyCode == 13){
+						update.call($(this));
+					}
+				});
+
+				$(this).siblings(".kk").blur(function(){
+					update.call($(this));
+				});
+
+
+				function update(){
+					var self = this;
+					//按下了回车键
+					$.get("control/update.php"
+						,{
+							"id" : num ,
+							 "xinzhi" : self.val()
+							}
+						,function(data){
+							if(data.result == "ok"){
+								self.hide();
+								self.siblings(".neirong").html(self.val()).fadeIn();
+							}
+						}
+					);
+				}
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Fenpho的GitHub主页</title>
+	<meta name="author" content="fenpho">
+	<meta name="description" content="Fenpho的GitHub主页">
+	<meta name=viewport content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+	<!-- 可以被搜索引擎搜索到 -->
+	<meta name="robots" content="all">
+
+	<!-- html5shiv使得传统浏览器支持部分HTML5元素并提供相应的基本样式 -->
+	<!--[if lt IE 9]>
+	<script src="script/html5shiv.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/index1200.css" />
+	<link rel="stylesheetindex1170.css" href="" id="rwdlink" />
+	<script type="text/javascript">
+		var rwdlink = document.getElementById("rwdlink");
+		var windowWidth = 0;
+		setCSS();
+		window.onresize = setCSS;
+		
+		function setCSS(){
+			windowWidth = document.documentElement.clientWidth;
+			if(windowWidth >= 1170){
+				rwdlink.href = "";
+			}else if(windowWidth >= 970){
+				rwdlink.href = "css/index992.css";
+			}else if(windowWidth >= 750){
+				rwdlink.href = "css/index768.css";
+			}else{
+				rwdlink.href = "css/index.css";
+			}
+		}
+	</script>
+</head>
+<body>
+	<header class="center">
+		<div class="logo">
+			<h1>fenpho</h1>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Team</a></li>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">Service</a></li>
+				<li><a href="#">Home</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<div class="carousel" id="carousel">
+			<div class="btns">
+				<a class="leftBtn"  id="leftBtn"></a>
+				<a class="rightBtn" id="rightBtn"></a>
+			</div>
+			<div class="imageslist" id="imageslist">
+				<ul>
+					<li class="first"><a><img src="images/0.jpg" alt="" /></a></li>
+					<li><a><img src="images/1.jpg" alt="" /></a></li>
+					<li><a><img src="images/2.jpg" alt="" /></a></li>
+					<li><a><img src="images/3.jpg" alt="" /></a></li>
+					<li><a><img src="images/4.jpg" alt="" /></a></li>
+				</ul>
+			</div>
+			<div class="circles">
+				<ol>
+					<li class="cur"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+			</div>
+		</div>
+	</section>
+	<div class="cb"></div>
+	<section class="center">
+		<div class="service">
+			<ul>
+				<li>
+					<div class="pic"></div>
+					<div class="text">
+						<h3>Web Design</h3>
+						<p>learn aboutlearn aboutlearn aboutlearn aboutlearn aboutlearn aboutlearn about</p>
+						<span>read more</span>
+					</div>
+				</li>
+				<li>
+					<div class="pic"></div>
+					<div class="text">
+						<h3>Web Design</h3>
+						<p>learn aboutlearn aboutlearn aboutlearn aboutlearn aboutlearn aboutlearn about</p>
+						<span>read more</span>
+					</div>
+				</li>
+				<li>
+					<div class="pic"></div>
+					<div class="text">
+						<h3>Web Design</h3>
+						<p>learn aboutlearn aboutlearn aboutlearn aboutlearn aboutlearn aboutlearn about</p>
+						<span>read more</span>
+					</div>
+				</li>
+				<li>
+					<div class="pic"></div>
+					<div class="text">
+						<h3>Web Design</h3>
+						<p>learn aboutlearn aboutlearn aboutlearn aboutlearn aboutlearn aboutlearn about</p>
+						<span>read more</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<div class="cb"></div>
+	<section class="portfolio">
+		<div class="center">
+			<h2>Portfolio</h2>
+			<div class="works">
+				<ul>
+					<li></li>
+					<li></li>
+					<li class="margin-right-none"></li>
+					<li></li>
+					<li></li>
+					<li class="margin-right-none"></li>
+				</ul>
+			</div>
+			<!-- 隔墙法，清除浮动带来的背景色不能显示和margin塌陷的影响 -->
+			<div class="cb"></div>
+			<span>See all works</span>
+		</div>
+	</section>
+	<div class="cl"></div>
+	<section class="center">
+		<div class="team">
+			<h2>The Team</h2>
+			<div class="friends">
+				<ul>
+					<li>
+						<div class="pic"></div>
+						<div class="text">
+							<h3>Fenpho</h3>
+							<span>CEO&founder</span>
+							<p>learn about learn aboutlearn aboutlearn aboutlearn aboutlearn aboutlearn about</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic"></div>
+						<div class="text">
+							<h3>Fenpho</h3>
+							<span>CEO&founder</span>
+							<p>learn about learn aboutlearn aboutlearn aboutlearn aboutlearn aboutlearn about</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic"></div>
+						<div class="text">
+							<h3>Fenpho</h3>
+							<span>CEO&founder</span>
+							<p>learn about learn aboutlearn aboutlearn aboutlearn aboutlearn aboutlearn about</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic"></div>
+						<div class="text">
+							<h3>Fenpho</h3>
+							<span>CEO&founder</span>
+							<p>learn about learn aboutlearn aboutlearn aboutlearn aboutlearn aboutlearn about</p>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</section>
+	<div class="cb"></div>
+	<section class="pro">
+		<div class="center basic">
+			<ul>
+				<li>
+					<h3>Basic</h3>
+					<dl>
+						<dt>Month</dt>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+					</dl>
+					<span>Buy now</span>
+				</li>
+				<li class="blue">
+					<h3>Basic</h3>
+					<dl>
+						<dt>Month</dt>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+					</dl>
+					<span>Buy now</span>
+				</li>
+				<li class="margin-right-none">
+					<h3>Basic</h3>
+					<dl>
+						<dt>Month</dt>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+						<dd>loream about</dd>
+					</dl>
+					<span>Buy now</span>
+				</li>
+				
+			</ul>
+		</div>
+	</section>
+	<div class="cb"></div>
+	<section class="says">
+		<div class="center saying">
+			<h2>What Clients Says</h2>
+			<p>loream aboutloream aboutloream aboutloream aboutloream aboutloream aboutloream aboutloream aboutloream aboutloream aboutloream aboutloream about</p>
+			<span>Jhon Dove</span>
+		</div>
+	</section>
+	<div class="cb"></div>
+	<footer>
+		<div class="center contact">
+			<h2>Contact Us</h2>
+			<div class="left">
+				<h3>Get in contact with us</h3>
+				<span>email</span>
+			</div>
+			<div class="right"></div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript">
+		//windowWidth为上面设置的全局变量
+		$("#carousel").css("width",windowWidth);
+
+		var $lis = $("#imageslist ul li");
+		
+		var idx = 0;
+
+		//右按钮添加事件监听
+		$("#rightBtn").click(function(){
+			if($lis.eq(idx).is(":animated")){
+				return;
+			}
+			//老图淡出
+			$lis.eq(idx).fadeOut(1000);
+			//信号量改变
+			idx++;
+			if(idx > $lis.length - 1){
+				idx = 0;
+			}
+			//新图淡入
+			$lis.eq(idx).fadeIn(1000);
+			$(".circles ol li").eq(idx).addClass("cur").siblings().removeClass("cur");
+		})
+
+		//左按钮添加事件监听
+		$("#leftBtn").click(function(){
+			if($lis.eq(idx).is(":animated")){
+				return;
+			}
+			//老图淡出
+			$lis.eq(idx).fadeOut(1000);
+			//信号量改变
+			idx--;
+			if(idx < 0){
+				idx = $lis.length - 1;
+			}
+			//新图淡入
+			$lis.eq(idx).fadeIn(1000);
+			$(".circles ol li").eq(idx).addClass("cur").siblings().removeClass("cur");
+		})
+		$(".circles ol li").click(function(){
+			$lis.eq(idx).fadeOut(1000);
+			idx = $(this).index();
+			$lis.eq(idx).fadeIn(1000);
+			$(this).addClass("cur").siblings().removeClass("cur");
+		});
+	</script>
+</body>
+</html>
