@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easie.js"></script>
+	<script type="text/javascript" src="js/velocity.min.js"></script>
+	<script type="text/javascript">
+		window.onmousewheel = function(event){
+			event = event || window.event;
+			if(event.preventDefault){
+				event.preventDefault();
+			}else{
+				event.returnValue = false;
+			}
+			return false;
+		}
+
+	</script>
+</head>
+<body>
+	<div class="header">
+		<div class="inner_c">
+			<div class="logo">
+				<h1><a href="">微信T管家</a></h1>
+			</div>
+			<!-- 导航条 -->
+			<div class="nav">
+				<ul>
+					<li class="cur"><a href="javascript:;" data-go="1">首页</a></li>
+					<li><a href="javascript:;" data-go="3">营销手段</a></li>
+					<li><a href="javascript:;" data-go="4">服务优势</a></li>
+					<li><a href="javascript:;" data-go="5">特色功能</a></li>
+					<li><a href="javascript:;" data-go="6">技术特点</a></li>
+					<li><a href="javascript:;" data-go="7">申请加入</a></li>
+					<li><a href="javascript:;" data-go="7">登录注册</a></li>
+					<li><a href="http://www.baidu.com/">加盟代理</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 7个屏幕 -->
+	<div class="container">
+		<div class="page no1">
+			<div class="inner_c">
+				<div id="loading">请稍后..图片正在加载..</div>
+			</div>
+		</div>
+		<div class="page no2">
+			<div class="inner_c">
+				<img class="b2_01" src="images/b2_01.png" alt="" />
+				<img class="b2_03 qiqiu" src="images/b2_03.png" alt="" />
+				<img class="b2_04 qiqiu" src="images/b2_04.png" alt="" />
+				<img class="b2_05 qiqiu" src="images/b2_05.png" alt="" />
+				<img class="b2_06 qiqiu" src="images/b2_06.png" alt="" />
+			</div>
+		</div>
+		<div class="page no3">
+			<div class="inner_c">
+				<div class="box">
+					<img class="b3_01" src="images/b3_01.png" alt="" />
+					<ul class="info">
+						<li class="info_no1"></li>
+						<li class="info_no2"></li>
+						<li class="info_no3"></li>
+						<li class="info_no4"></li>
+						<li class="info_no5"></li>
+						<li class="info_no6"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="page no4">
+			
+		</div>
+		<div class="page no5">
+			<p>5</p>
+			<p>5</p>
+			<p>5</p>
+			<p>5</p>
+			<p>5</p>
+			<p>5</p>
+			<p>5</p>
+			<p>5</p>
+			<p>5</p>
+			<p>5</p>
+		</div>
+		<div class="page no6">
+			<p>6</p>
+			<p>6</p>
+			<p>6</p>
+			<p>6</p>
+			<p>6</p>
+			<p>6</p>
+			<p>6</p>
+			<p>6</p>
+			<p>6</p>
+			<p>6</p>
+		</div>
+		<div class="page no7">
+			
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="js/donghua.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>		

@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.accordion{
+			width: 500px;
+			margin: 100px auto;
+			border: 1px solid #000;
+		}
+		.accordion ul{
+			list-style: none;
+		}
+		.accordion ul li.cur h3{
+			background-color: orange;
+			
+		}
+		.accordion ul li h3{
+			line-height: 40px;
+			background-color: skyblue;
+			padding: 0 10px;
+			border-bottom: 1px solid #000;
+			color:white;
+			cursor: pointer;
+			position: relative;
+		}
+		.accordion ul li .content{
+			padding: 10px;
+			line-height: 150%;
+			font-size: 16px;
+			display: none;
+		}
+		.accordion ul li.first .content{
+			display: block;
+		}
+		.accordion ul li i{
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			width: 16px;
+			height: 16px;
+			background-color: yellow;
+			background: url(images/icon.png);
+			/*css3的过渡*/
+			transition:all 1s ease 0s;
+		}
+		.accordion ul li.cur i{
+			/*有cur的时候转90度*/
+			transform:rotate(90deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="accordion">
+		<ul>
+			<li class="cur first">
+				<h3>北方的笛子<i></i></h3>
+				<div class="content">
+					<p>
+						北方的笛子多为梆笛（高音笛），发音高亢、嘹亮。这和北方人民所处的地区特点和生活、劳动习惯是分不开的。在演奏当地色彩的乐曲（包括各种地方戏曲）时，以“历音”、“滑音”、“吐音”、“花舌”等最为多用。气息运用上较猛。如秦腔、眉（右边加耳旁）户、蒲剧、河北梆子等，只要多吹一吹这些欢曲音乐，就可以熟悉北方笛子的一些传统演奏方法。
+					</p>
+				</div>
+			</li>
+			<li>
+				<h3>南方的笛子<i></i></h3>
+				<div class="content">
+					<p>
+						江南一带普遍多使用曲笛。这种笛子的笛膜贴得较松，音色润丽、清晰。在演奏中以各种北装饰手法，如“唤音”、“迭音”、“倚音”、“颤音”等最为多用，一般忌用强吐和断奏。在气息运用上要求饱满均匀，不能过猛过急。如果多吹奏一些江南的传统乐曲，对熟悉江南笛子的特点和风格会有直接的帮助。
+					</p>
+				</div>
+			</li>
+			<li>
+				<h3>蒙古族的笛子<i></i></h3>
+				<div class="content">
+					<p>
+						内蒙草原上的人民，常年多过着不定居的生活，那里的人们性格开朗、奔放。乐曲辽阔、高亢，常常出现一些多音的急速进行而又突然停留在一个延长音上，造成了非常开阔、奔放的效果，就像一匹骏马在草原上飞驰一样。这个地区的笛子，笛膜一般贴得较紧，甚至不要笛膜（有时也要松膜的效果）。在演奏技巧上多用一些装饰手法，如“迭音”、“倚音”、“唤音”等。更突出的一个特点是，多用上方三度或四度的颤音指法。
+					</p>
+				</div>
+			</li>
+			<li>
+				<h3>维吾尔族的笛子<i></i></h3>
+				<div class="content">
+					<p>
+						维吾尔族人民能歌善舞，他们的音乐明快、火热。多用高音笛子，一般不用笛膜，或将笛膜贴得很紧（有时也用松膜效果）。在吹奏方法上一般运气较猛，冲力较大，强弱对比特别明显。最多的技巧是“急滑音”和一些装饰性的如“倚音”、“赠音”、“唤音”等等。此外“花舌”和“吐音”也常常使用，而且多半要求吐得断顿有力。
+					</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript" src="../js/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript">
+		//监听h3
+
+		$(".accordion ul li h3").click(function(){
+			//所有的content合上
+			$(".content").slideUp();
+			//自己的兄弟content显示
+			
+			if($(this).siblings(".content").is(":visible")){
+				//如果自己的内容兄弟可见，
+				//自己的内容兄弟合上，变为不可见。自己的爸爸去掉cur
+				$(this).siblings(".content").stop(true).slideUp();
+				$(this).parent().removeClass("cur");
+			}else{
+				//反之，如果自己的内容兄弟不可见
+				$(".cur").removeClass("cur");
+				//自己的爸爸加上cur
+				$(this).parent().addClass("cur");
+				//自己的内容兄弟下滑，变为可见
+				$(this).siblings(".content").stop(true).slideDown();
+			}
+		})
+	</script>
+</body>
+</html>

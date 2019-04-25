@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        canvas{
+            border: 1px solid black;
+            display: block;
+            margin: 0 auto;
+            background: url(images/bg.png) repeat-x;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="1000" height="600"></canvas>
+    <script type="text/javascript" src="js/simpleInheritance.js"></script>
+    <script type="text/javascript" src="js/Game.js"></script>
+    <script type="text/javascript" src="js/StaticResoucesUtil.js"></script>
+    <script type="text/javascript" src="js/Block.js"></script>
+    <script type="text/javascript" src="js/BlockManager.js"></script>
+    <script type="text/javascript" src="js/Racket.js"></script>
+    <script type="text/javascript" src="js/Ball.js"></script>
+    <script type="text/javascript">
+        var game = new Game({
+            "canvasid" : "canvas",
+            "fps"   :   120
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'shaoshanhuan';
+    src:    url('../fonts/icomoon.eot?izpax1');
+    src:    url('../fonts/icomoon.eot?izpax1#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?izpax1') format('truetype'),
+        url('../fonts/icomoon.woff?izpax1') format('woff'),
+        url('../fonts/icomoon.svg?izpax1#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.header .nav ul li{
+	width: 100px;
+}
+
+.banner{
+	position: relative;
+	height: 254px;
+	overflow: hidden;
+}
+.banner img{
+	position: absolute;
+	left: 50%;
+	margin-left: -840px;
+}
+.content {
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.content .content_bd{
+	margin-top: 20px;
+	text-indent: 2em;
+	font-size: 16px;
+	line-height: 150%;
+}
+.content .content_bd h4{
+	font-size: 22px;
+	text-align: center;
+	font-weight: bold;
+	margin: 20px 0;
+}
+.content .content_hd{
+	height: 69px;
+	border-bottom: 1px solid #C7D6E5;
+	overflow: hidden;
+}
+.content .content_hd h3{
+	float: left;
+	line-height: 80px;
+    padding-left: 30px;
+    background: url(../images/icons.png) no-repeat -446px 32px;
+	font-size: 20px;
+	font-weight: bold;	
+	color:#444866;
+}
+.content .breadNav{
+	float: right;
+	padding-top: 30px;
+}
+
+.content .breadNav a{
+	text-decoration: none;
+	font-family: "shaoshanhuan";
+	color:#333;
+}
+.content .breadNav a:hover{
+	color:red;
+}
+.content .breadNav span{
+	padding-left: 17px;
+	background: url(../images/icons.png) no-repeat -455px -115px;
+}
